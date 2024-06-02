@@ -1,0 +1,21 @@
+/* Форма обратной связи */
+.callback-form {
+	display: flex;
+	gap: 16px;
+
+	&__inp {
+		flex-basis: 288px;
+	}
+
+	@media (max-width: 920px) {
+		/* Форма обратной связи */
+		& {
+			flex-direction: column;
+		}
+
+		&__inp {
+			/* будет использовано начальное значение*/
+			flex-basis: initial;
+		}
+	}
+}

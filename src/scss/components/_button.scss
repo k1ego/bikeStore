@@ -1,0 +1,27 @@
+@import '../variables';
+
+/* Кнопка */
+.default-btn {
+	/* тк ссылки по умолчанию inline */
+	display: inline-block;
+	padding: 11px 47px;
+	background-color: $base-color;
+	color: $black-color;
+	border-radius: 12px;
+	border: none;
+	/* 1-пиксельная видимая рамка (outline) с прозрачным цветом */
+	outline: 1px solid transparent;
+	/* расстояние между контуром элемента и его краем */
+	outline-offset: 2px;
+	transition: outline-color $transition-duration,
+		background-color $transition-duration;
+	cursor: pointer;
+
+	&:focus-visible {
+		outline-color: $base-color;
+	}
+
+	&:hover {
+		background-color: $base-color-hover;
+	}
+}
