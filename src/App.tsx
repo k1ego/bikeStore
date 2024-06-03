@@ -1,26 +1,30 @@
+import React, { Suspense } from 'react';
 import './scss/App.scss';
 
-import { Callback } from './components/Callback';
-import { Catalog } from './components/Catalog';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
+import { Route, Routes } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import { Home } from './pages/Home';
+
+
+const NotFound = React.lazy(
+	() => import('./pages/NotFound')
+);
 
 function App() {
 	return (
-		<div className='App'>
-			<header>
-				<Header />
-			</header>
-			<main>
-				<Hero />
-				<Callback />
-				<Catalog />
-			</main>
-			<footer>
-				<Footer />
-			</footer>
-		</div>
+		<Routes>
+			<Route path='/' element={<MainLayout />}>
+				<Route path='' element={<Home />} />
+				<Route
+					path='*'
+					element={
+						<Suspense fallback={<div>Идёт загрузка...</div>}>
+							<NotFound />
+						</Suspense>
+					}
+				/>
+			</Route>
+		</Routes>
 	);
 }
 

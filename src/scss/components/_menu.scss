@@ -15,7 +15,7 @@
 	color: white;
 	outline: none;
 	transition: color $transition-duration,
-		background-color $transition-duration;
+	background-color $transition-duration;
 
 	&:focus-visible {
 		/* отсутствует рамка на объекте при фокусе */
