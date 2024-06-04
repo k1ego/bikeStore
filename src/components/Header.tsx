@@ -1,13 +1,16 @@
 import React from 'react';
 import logo from '../assets/svg/logo.svg';
+import { Link } from 'react-router-dom';
 
 export const Header: React.FC = () => {
+
+
 	return (
 		<div className='header'>
 			<div className='container header__container'>
-				<a href='#' className='header__logo'>
+				<Link to='/' className='header__logo'>
 					<img src={logo} width='154' alt='ВелоSHOP' className='logo' />
-				</a>
+				</Link>
 				<nav className='menu header__menu'>
 					<ul className='menu__list header__menu-list'>
 						<li className='menu__item'>
@@ -31,14 +34,14 @@ export const Header: React.FC = () => {
 							</a>
 						</li>
 						<li className='menu__item'>
-							<a href='#' className='menu__link'>
+							<Link to='/Entry' className='menu__link'>
 								Войти
-							</a>
+							</Link>
 						</li>
 						<li className='menu__item'>
-							<a href='#' className='menu__link'>
+							<Link to='/Authorization' className='menu__link'>
 								Зарегистрироваться
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</nav>
