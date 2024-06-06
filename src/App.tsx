@@ -4,8 +4,8 @@ import './scss/App.scss';
 import { Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import { Home } from './pages/Home';
-import { Entry } from './pages/Entry'
-import { Authorization } from './pages/Authorization';
+import { Authorization } from './pages/Authorization'
+import { SignIn } from './pages/SignIn';
 
 
 const NotFound = React.lazy(
@@ -18,10 +18,10 @@ function App() {
 			<Route path='/' element={<MainLayout />}>
 				<Route path='' element={<Home />} />
 				<Route
-					path='/Entry'
+					path='/SignIn'
 					element={
 						<Suspense fallback={<div>Идёт загрузка...</div>}>
-							<Entry />
+							<SignIn />
 						</Suspense>
 					}
 				/>

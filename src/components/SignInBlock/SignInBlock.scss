@@ -1,0 +1,166 @@
+@import '../../scss/variables';
+
+.container-auto {
+	display: flex;
+	width: 100%;
+}
+
+.form {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+	&__logo {
+		margin-top: 31px;
+		margin-left: 42px;
+	}
+	&__content {
+		padding-top: 102px;
+		padding-bottom: 102px;
+		width: 100%;
+		max-width: 431px;
+		align-self: center;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 45px;
+		color: black;
+		display: block;
+		margin-bottom: 22px;
+	}
+	&__subtitle {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		color: black;
+		margin-bottom: 6px;
+		&:last-of-type {
+			margin-bottom: 52px;
+		}
+	}
+	&__link {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+.input-box {
+	margin-bottom: 49px;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	&__info {
+		display: block;
+		margin-bottom: 11px;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 20px;
+		color: $placeholder-color;
+		// чтобы нельзя было выделить
+		user-select: none;
+	}
+	& > input {
+		padding: 0;
+		position: relative;
+		border: none;
+		width: 100%;
+		border-bottom: 2px solid $placeholder-color;
+		padding-bottom: 9px;
+		padding-left: 27px;
+		border-radius: 0;
+		&:focus {
+			border-bottom: 2px solid $black-color;
+		}
+	}
+	&__icon {
+		position: absolute;
+		z-index: 1;
+	}
+}
+
+.btn-box {
+	margin-top: 95px;
+	& > button {
+		border-radius: 32px;
+		font-weight: 500;
+		font-size: 17px;
+		line-height: 26px;
+		color: white;
+		width: 100%;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		text-align: center;
+		cursor: pointer;
+	}
+}
+
+.form-box {
+	&__social {
+		margin-top: 39px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&-info {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 24px;
+			color: $placeholder-color;
+			margin-bottom: 31px;
+		}
+		&-items {
+			display: flex;
+			& > a {
+				margin-right: 20px;
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.promo {
+	flex: 0 0 735px;
+	display: flex;
+	flex-direction: column;
+	padding: 21px;
+	&__box {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $black-color;
+		border-radius: 21px;
+	}
+	&__image {
+		width: 100%;
+		margin-bottom: 90px;
+	}
+	&__title {
+		padding-left: 88px;
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 60px;
+		color: #fff;
+		margin-bottom: 4px;
+	}
+	&__subtitle {
+		padding-left: 88px;
+		display: block;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 30px;
+		color: #fff;
+	}
+}
+
+@media (max-width: 940px) {
+	.promo {
+		display: none;
+	}
+	.form {
+		margin-left: 18px;
+		margin-right: 18px;
+	}
+}
