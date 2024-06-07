@@ -80,7 +80,7 @@
 }
 
 .btn-box {
-	margin-top: 95px;
+	margin-top: 55px;
 	& > button {
 		border-radius: 32px;
 		font-weight: 500;
@@ -126,6 +126,7 @@
 	flex-direction: column;
 	padding: 21px;
 	&__box {
+		margin-bottom: 20px;
 		flex-grow: 1;
 		display: flex;
 		align-items: center;

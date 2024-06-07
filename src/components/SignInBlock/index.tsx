@@ -25,7 +25,7 @@ export const SignInBlock: React.FC = () => {
 						</p>
 						<p className='form__subtitle'>
 							You can{' '}
-							<a className='form__link default-link' href='#'>
+							<a className='form__link default-link' href='/SignUp'>
 								Register here !
 							</a>
 						</p>

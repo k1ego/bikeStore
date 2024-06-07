@@ -4,7 +4,7 @@ import './scss/App.scss';
 import { Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import { Home } from './pages/Home';
-import { Authorization } from './pages/Authorization'
+import { SignUp } from './pages/SignUp'
 import { SignIn } from './pages/SignIn';
 
 
@@ -26,10 +26,10 @@ function App() {
 					}
 				/>
 				<Route
-					path='/Authorization'
+					path='/SignUp'
 					element={
 						<Suspense fallback={<div>Идёт загрузка...</div>}>
-							<Authorization />
+							<SignUp />
 						</Suspense>
 					}
 				/>

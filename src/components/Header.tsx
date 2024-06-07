@@ -39,7 +39,7 @@ export const Header: React.FC = () => {
 							</Link>
 						</li>
 						<li className='menu__item'>
-							<Link to='/Authorization' className='menu__link'>
+							<Link to='/SignUp' className='menu__link'>
 								Зарегистрироваться
 							</Link>
 						</li>
