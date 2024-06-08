@@ -2,8 +2,19 @@ import React from 'react';
 import logo from '../assets/svg/logo.svg';
 import { Link } from 'react-router-dom';
 
+
+
+
 export const Header: React.FC = () => {
 
+
+
+	const onScrolling = () => {
+		window.scrollTo({
+			top: 915,
+			behavior: 'smooth',
+		});
+	}
 
 	return (
 		<div className='header'>
@@ -13,7 +24,7 @@ export const Header: React.FC = () => {
 				</Link>
 				<nav className='menu header__menu'>
 					<ul className='menu__list header__menu-list'>
-						<li className='menu__item'>
+						<li onClick={onScrolling} className='menu__item'>
 							<a href='#' className='menu__link'>
 								Каталог
 							</a>
